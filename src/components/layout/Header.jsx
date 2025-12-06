@@ -178,10 +178,10 @@ const Header = () => {
                                 alt="AIBA Logo" 
                                 className="h-14 w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain transition-transform group-hover:scale-105"
                             />
-                            <h1 className="text-base md:text-lg lg:text-xl font-bold text-army-dark-500 whitespace-nowrap">
+                            <h1 className="text-base md:text-lg lg:text-xl font-bold text-gray-900 whitespace-nowrap">
                                 Army Institute of Business Administration
                             </h1>
-                            <h5>
+                            <h5 className="text-xs text-gray-600">
                                 (AIBA), Savar Cantonment, Savar 
                             </h5>
                         </Link>
