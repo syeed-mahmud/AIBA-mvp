@@ -1,58 +1,141 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
 
-:root {
-  /* Colors */
-  --color-primary: #154734;
-  /* Army Green */
-  --color-primary-light: #2d6a4f;
-  --color-secondary: #d4af37;
-  /* Gold */
-  --color-secondary-light: #f4c430;
-  --color-accent: #c0392b;
-  /* Alert/Notice Red */
-
-  --color-text-main: #1f2937;
-  --color-text-light: #6b7280;
-  --color-text-white: #ffffff;
-
-  --color-bg-body: #f9fafb;
-  --color-bg-white: #ffffff;
-  --color-bg-light: #f3f4f6;
-
-  /* Typography */
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-
+/* ==================== TAILWIND V4 THEME CONFIGURATION ==================== */
+@theme {
+  /* Primary Sage Palette */
+  --color-sage-deep: #7A8F79;
+  --color-sage-medium: #A7BFA6;
+  --color-sage-light: #DDE7D8;
+  
+  /* Accent Colors */
+  --color-army-dark: #3C4E3B;
+  --color-soft-gold: #BBA766;
+  --color-alert-red: #D9534F;
+  --color-cool-gray: #71797E;
+  
+  /* Navy Blue for CTAs */
+  --color-navy: #1E3A5F;
+  --color-navy-light: #2C5282;
+  --color-navy-dark: #1A365D;
+  
+  /* Background colors */
+  --color-off-white: #F8F9F7;
+  
+  /* Font Family */
+  --font-sans: 'Nunito Sans', 'Inter', sans-serif;
+  
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  /* Transitions */
-  --transition-base: all 0.3s ease-in-out;
+  --shadow-low: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-high: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 6px 20px rgba(122, 143, 121, 0.25);
+  --shadow-navbar: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  /* ==================== AIBA DESIGN SYSTEM ==================== */
+  
+  /* Primary Color Palette - Deep Sage Theme */
+  --color-sage-deep: #7A8F79;
+  --color-sage-medium: #A7BFA6;
+  --color-sage-light: #DDE7D8;
+  --color-white: #FFFFFF;
+  --color-off-white: #F8F9F7;
+  
+  /* Accent Colors */
+  --color-army-dark: #3C4E3B;
+  --color-soft-gold: #BBA766;
+  --color-alert-red: #D9534F;
+  --color-cool-gray: #71797E;
+  
+  /* Legacy aliases for compatibility */
+  --color-primary: #7A8F79;
+  --color-primary-light: #A7BFA6;
+  --color-primary-dark: #3C4E3B;
+  --color-secondary: #BBA766;
+  --color-secondary-light: #d4c794;
+  --color-accent: #D9534F;
+
+  /* Text Colors */
+  --color-text-main: #1f2937;
+  --color-text-light: #71797E;
+  --color-text-white: #FFFFFF;
+
+  /* Background Colors */
+  --color-bg-body: #F8F9F7;
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #DDE7D8;
+
+  /* Gradients */
+  --gradient-sage: linear-gradient(135deg, #A7BFA6 0%, #DDE7D8 100%);
+  --gradient-sage-horizontal: linear-gradient(to right, #7A8F79, #A7BFA6);
+  --gradient-hero-overlay: linear-gradient(to bottom, rgba(60, 78, 59, 0.7), rgba(122, 143, 121, 0.6));
+
+  /* Typography */
+  --font-primary: 'Nunito Sans', 'Inter', sans-serif;
+  --font-sans: 'Nunito Sans', 'Inter', sans-serif;
+  
+  /* Font Sizes */
+  --text-display: clamp(42px, 5vw, 56px);
+  --text-h1: 32px;
+  --text-h2: 28px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-body-lg: 18px;
+  --text-body: 16px;
+  --text-body-sm: 14px;
+  --text-caption: 12px;
+
+  /* Spacing System (4px base grid) */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-low: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-high: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 6px 20px rgba(122, 143, 121, 0.25);
+  --shadow-navbar: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-base: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --max-width: 1400px;
+  --navbar-height: 76px;
+  --top-bar-height: 38px;
+  --carousel-height-desktop: 540px;
+  --carousel-height-mobile: 320px;
+}
+
+/* Note: Removed the * { margin: 0; padding: 0; } reset as it conflicts with Tailwind utilities */
+/* Tailwind's preflight already handles CSS resets properly */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-primary);
   background-color: var(--color-bg-body);
   color: var(--color-text-main);
+  font-size: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -61,10 +144,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
-  color: var(--color-primary);
+  font-family: var(--font-primary);
+  color: var(--color-sage-deep);
   line-height: 1.2;
+  font-weight: 700;
 }
+
+h1 { font-size: var(--text-h1); font-weight: 800; }
+h2 { font-size: var(--text-h2); font-weight: 700; }
+h3 { font-size: var(--text-h3); font-weight: 600; }
+h4 { font-size: var(--text-h4); font-weight: 600; }
 
 a {
   text-decoration: none;
@@ -78,61 +167,77 @@ ul {
 
 button {
   cursor: pointer;
-  font-family: var(--font-sans);
+  font-family: var(--font-primary);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container - only set max-width and centering, let Tailwind handle padding */
 .container {
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
-
+/* ==================== BUTTON SYSTEM ==================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem 2rem;
-  border-radius: 0.5rem;
+  height: 46px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
   font-weight: 600;
+  font-size: var(--text-body);
   transition: var(--transition-base);
   border: none;
-  font-size: 0.9375rem;
+  min-width: 44px;
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-army-dark);
   color: var(--color-text-white);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(21, 71, 52, 0.3);
+  background-color: var(--color-sage-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .btn-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--color-soft-gold);
+  color: var(--color-army-dark);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-secondary-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  background-color: #cdb976;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-army-dark);
+}
+
+/* ==================== SECTION STYLES ==================== */
 .section-title {
-  font-size: 2.5rem;
+  font-size: var(--text-h2);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: var(--spacing-m);
+  color: var(--color-sage-deep);
+  font-weight: 700;
 }
 
 .section-title::after {
@@ -143,33 +248,81 @@ button {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: var(--color-secondary);
+  background: var(--gradient-sage-horizontal);
+  border-radius: var(--radius-sm);
 }
 
-/* Improved spacing utilities */
 .py-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
 }
 
 .py-section-lg {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
 }
 
 @media (max-width: 768px) {
   .py-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
   }
 
   .py-section-lg {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
   }
 
   .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: var(--text-h3);
+    margin-bottom: var(--spacing-xl);
   }
+}
+
+/* ==================== CARD STYLES ==================== */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-l);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* ==================== GRADIENT BACKGROUNDS ==================== */
+.bg-sage-gradient {
+  background: var(--gradient-sage);
+}
+
+.bg-sage-gradient-h {
+  background: var(--gradient-sage-horizontal);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
